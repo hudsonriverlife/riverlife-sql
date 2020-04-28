@@ -75,7 +75,7 @@ public class FishCountSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2003/fish.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Fish.csv";
 		FishCountSqlGenerator work=new FishCountSqlGenerator();
 		work.processFile(inputFile);
 	

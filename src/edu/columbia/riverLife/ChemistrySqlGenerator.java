@@ -121,7 +121,7 @@ public class ChemistrySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/bsun/riverLife/2003/chemistry.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Chemistry.csv";
 		ChemistrySqlGenerator work=new ChemistrySqlGenerator();
 		work.processFile(inputFile);
 	

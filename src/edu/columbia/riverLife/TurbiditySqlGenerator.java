@@ -73,7 +73,7 @@ public class TurbiditySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/bsun/riverLife/2004/turbidity.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/2019Turbidity.csv";
 		TurbiditySqlGenerator work=new TurbiditySqlGenerator();
 		work.processFile(inputFile);
 	

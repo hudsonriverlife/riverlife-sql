@@ -82,7 +82,7 @@ public class StandardSalinitySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/bsun/riverLife/2016/standardized_salinity.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019StandarizedSalinity.csv";
 		StandardSalinitySqlGenerator work=new StandardSalinitySqlGenerator();
 		work.processFile(inputFile);
 	

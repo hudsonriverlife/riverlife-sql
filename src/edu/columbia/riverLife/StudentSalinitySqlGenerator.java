@@ -84,7 +84,7 @@ public class StudentSalinitySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/bsun/riverLife/2003/student_salinity.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019StudentSalinity.csv";
 		StudentSalinitySqlGenerator work=new StudentSalinitySqlGenerator();
 		work.processFile(inputFile);
 	

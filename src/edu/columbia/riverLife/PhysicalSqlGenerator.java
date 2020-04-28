@@ -94,7 +94,8 @@ public class PhysicalSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/bsun/riverLife/2006/physical.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Physical.csv";
+		
 		PhysicalSqlGenerator work=new PhysicalSqlGenerator();
 		work.processFile(inputFile);
 	
