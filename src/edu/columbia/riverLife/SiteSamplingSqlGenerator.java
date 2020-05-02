@@ -1,8 +1,10 @@
 package edu.columbia.riverLife;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class SiteSamplingSqlGenerator {
@@ -18,18 +20,18 @@ public class SiteSamplingSqlGenerator {
 			return false;
 	}
 	
-	protected void processDataLine(String line) {
+	protected StringBuffer processDataLine(String line) {
 		String [] fields=line.split(",", -1);
 		
 		if (fields.length < 3)
-			return;
+			return null;
 		String river_site_id=fields[0];
 		String site_sampling_id=fields[1];
 		String sampling_time = fields[2];
 		
 		
 		if (this.isEmpty(river_site_id) && this.isEmpty(site_sampling_id) && this.isEmpty(sampling_time)) {
-			return;
+			return null;
 		}
 		  
 		StringBuffer sql=new StringBuffer();
@@ -43,7 +45,8 @@ public class SiteSamplingSqlGenerator {
 		else
 			sql.append("'"+sampling_time + "');");
 					
-		System.out.println(sql.toString());
+		//System.out.println(sql.toString());
+		return sql;
     }
 	
 	public void processFile(String inputFile) {
@@ -54,15 +57,18 @@ public class SiteSamplingSqlGenerator {
 			StringBuffer stringBuffer = new StringBuffer();
 			String line;
 			int i=0;
-			while ((line = bufferedReader.readLine()) != null) {
+		    BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019Site_Sampling.sql"));
+		    while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
 					continue;
 				
-				processDataLine(line);
+				stringBuffer = processDataLine(line);
+				if(stringBuffer !=null ) writer.write(stringBuffer.toString()+"\n");
 			}
 			fileReader.close();
-			System.out.println(stringBuffer.toString());
+			//System.out.println(stringBuffer.toString());
+			 writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
