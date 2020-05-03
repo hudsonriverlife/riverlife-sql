@@ -55,7 +55,6 @@ public class StandardSalinitySqlGenerator {
 			sql.append("null);");
 		else
 			sql.append(methodId + ");");			
-		//System.out.println(sql.toString());
         writer.write(sql.toString()+"\n");
 		
 	//	insert into "schemaA".site_sampling_fish_count (amount, site_sampling_id, fish_id,fishing_method_id, sampling_date) values (1, 1, 17, 1, '2014-07-12');

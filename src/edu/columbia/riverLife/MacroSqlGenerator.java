@@ -1,8 +1,10 @@
 package edu.columbia.riverLife;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -21,14 +23,11 @@ public class MacroSqlGenerator {
 		}
 	}
 	
-	protected void processFishCountLine(String line) {
+	protected void processFishCountLine(String line,BufferedWriter writer) throws IOException {
 		String [] ids=line.split(",");
 		int length=ids.length;
 		if (length <  2)
 			return;
-	//	String date=ids[0];
-	//	if (date.trim().length() == 0)
-	//		return;
 		String samplingSiteId=ids[0];
 		if (samplingSiteId.trim().length() == 0)
 			return;
@@ -43,7 +42,7 @@ public class MacroSqlGenerator {
 			Integer fishId=this.fishIds.get(j);
 			sql.append("insert into riverlife.site_sampling_macroinvertebrate_count ( site_sampling_id, collection_method_id, macroinvertebrate_id, amount) values (");
 			sql.append(samplingSiteId + "," + methodId + "," + fishId + "," + buffer + ");");
-			System.out.println(sql.toString());
+			writer.write(sql.toString()+"\n");
 
 		}
 	//	insert into "schemaA".site_sampling_fish_count (amount, site_sampling_id, fish_id,fishing_method_id, sampling_date) values (1, 1, 17, 1, '2014-07-12');
@@ -54,9 +53,9 @@ public class MacroSqlGenerator {
 			File file = new File(inputFile);
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			StringBuffer stringBuffer = new StringBuffer();
 			String line;
 			int i=0;
+			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019Macros.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -65,10 +64,10 @@ public class MacroSqlGenerator {
 					processHeader(line);
 					continue;
 				}
-				processFishCountLine(line);
+				processFishCountLine(line,writer);
 			}
 			fileReader.close();
-			System.out.println(stringBuffer.toString());
+			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
