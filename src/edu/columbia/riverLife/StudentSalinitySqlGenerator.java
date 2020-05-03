@@ -1,8 +1,10 @@
 package edu.columbia.riverLife;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -14,7 +16,7 @@ public class StudentSalinitySqlGenerator {
 		else
 			return false;
 	}
-	protected void processDataLine(String line) {
+	protected void processDataLine(String line, BufferedWriter writer) throws IOException {
 		String [] fields=line.split(",", -1);
 		
 		if (fields.length < 5)
@@ -55,8 +57,8 @@ public class StudentSalinitySqlGenerator {
 			sql.append("null);");
 		else
 			sql.append(methodId + ");");			
-		System.out.println(sql.toString());
-
+		//System.out.println(sql.toString());
+        writer.write(sql.toString()+"\n");
 		
 	//	insert into "schemaA".site_sampling_fish_count (amount, site_sampling_id, fish_id,fishing_method_id, sampling_date) values (1, 1, 17, 1, '2014-07-12');
 
@@ -66,18 +68,19 @@ public class StudentSalinitySqlGenerator {
 			File file = new File(inputFile);
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			StringBuffer stringBuffer = new StringBuffer();
 			String line;
 			int i=0;
+			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019StudentSalinity.sql"));
+			
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
 					continue;
 				
-				processDataLine(line);
+				processDataLine(line,writer);
 			}
 			fileReader.close();
-			System.out.println(stringBuffer.toString());
+            writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
