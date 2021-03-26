@@ -15,14 +15,18 @@ public class PhysicalSqlGenerator {
 			return false;
 	}
 	protected void processDataLine(String line,BufferedWriter writer) throws IOException {
-		String [] fields=line.split(",", -1);
-		
+	    String[] fields = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+	    
 		if (fields.length < 11)
 			return;
+	    System.out.println(fields.length);
 		String measure_time=fields[0];
+		System.out.println(measure_time);   
 		String air_temperature=fields[1];
 		String weather_today= fields[2];
+		System.out.println(weather_today);   
 		String weather_last_3_days = fields[3];
+		System.out.println(weather_last_3_days);  
 		String cloud_coverage_id = fields[4];
 		String wind_speed = fields[5];
 		String wind_beaufort_id = fields[6];
@@ -75,7 +79,7 @@ public class PhysicalSqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019Physical.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2020_DITL_CSVs/sql/2020Physical.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -90,7 +94,7 @@ public class PhysicalSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Physical.csv";
+		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2020_DITL_CSVs/2020DITL_Physical.csv";
 		
 		PhysicalSqlGenerator work=new PhysicalSqlGenerator();
 		work.processFile(inputFile);
