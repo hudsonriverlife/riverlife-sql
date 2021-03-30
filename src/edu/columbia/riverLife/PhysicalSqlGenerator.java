@@ -19,14 +19,10 @@ public class PhysicalSqlGenerator {
 	    
 		if (fields.length < 11)
 			return;
-	    System.out.println(fields.length);
-		String measure_time=fields[0];
-		System.out.println(measure_time);   
+	        String measure_time=fields[0];
 		String air_temperature=fields[1];
 		String weather_today= fields[2];
-		System.out.println(weather_today);   
 		String weather_last_3_days = fields[3];
-		System.out.println(weather_last_3_days);  
 		String cloud_coverage_id = fields[4];
 		String wind_speed = fields[5];
 		String wind_beaufort_id = fields[6];
