@@ -67,7 +67,7 @@ public class StandardSalinitySqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019StandardizedSalinity.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021StandardizedSalinity.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -83,7 +83,7 @@ public class StandardSalinitySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019StandarizedSalinity.csv";
+		String inputFile="csv/2021_Standardized_Salinity_Updated.csv";
 		StandardSalinitySqlGenerator work=new StandardSalinitySqlGenerator();
 		work.processFile(inputFile);
 	

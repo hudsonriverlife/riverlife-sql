@@ -55,7 +55,7 @@ public class MacroSqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019Macros.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/barnacles.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -74,7 +74,7 @@ public class MacroSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Macros.csv";
+		String inputFile="csv/2017MacrosUpdated.csv";
 		MacroSqlGenerator work=new MacroSqlGenerator();
 		work.processFile(inputFile);
 	

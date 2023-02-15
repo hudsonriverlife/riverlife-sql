@@ -34,6 +34,8 @@ public class FishCountSqlGenerator {
 		String samplingSiteId=ids[0];
 		if (samplingSiteId.trim().length() == 0)
 			return;
+
+		// writer.write("delete from riverlife.site_sampling_fish_count where site_sampling_id = " + samplingSiteId + ";" + "\n");
 		String methodId=ids[1];
 		if (methodId == null || methodId.trim().length() == 0)
 			methodId = "null";
@@ -58,7 +60,7 @@ public class FishCountSqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019FishCount.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/fish/2019FishUpdated.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -77,7 +79,7 @@ public class FishCountSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019FishCount.csv";
+		String inputFile="csv/2019FishUpdated.csv";
 		FishCountSqlGenerator work=new FishCountSqlGenerator();
 		work.processFile(inputFile);
 	

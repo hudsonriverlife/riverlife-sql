@@ -42,7 +42,7 @@ public class ChemistrySqlGenerator {
 		if (this.isEmpty(name))	
 			sql.append("null,");
 		else
-			sql.append("'" + name + "',");
+			sql.append("'" + name.trim() + "',");
 		
 		if (this.isEmpty(sample_time))	
 			sql.append("null,");
@@ -108,7 +108,7 @@ public class ChemistrySqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/song/Documents/javaworkspace/riverlife2/data/2019_DITL_CSVs/sql/2019Chemistry.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021Chemistry.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -124,7 +124,7 @@ public class ChemistrySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="/Users/song/Documents/javaworkspace/riverLife2/data/2019_DITL_CSVs/2019Chemistry.csv";
+		String inputFile="csv/2021_chemistry.csv";
 		ChemistrySqlGenerator work=new ChemistrySqlGenerator();
 		work.processFile(inputFile);
 	
