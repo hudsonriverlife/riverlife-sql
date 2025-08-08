@@ -1,0 +1,5 @@
+INSERT INTO riverlife.river_site(river_site_id, "name", latitude, longitude, river_id, description, picture, river_mile) VALUES 
+(148, 'Shirley Chisholm State Park', 40.638846, -73.869822, 1, 'Location: Shirley Chisholm Park, Jamaica Bay. Area: Slightly protected part of Jamaica Bay with an open sandy shoreline near marsh grasses. Sampling Site: Beach on the eastern side of the park near Penn Pier. Surrounding Land Use: Urban/Residential; Beach; Grassland Park. Shoreline: 95% Sandy; 5% Rocky', null, -5);
+
+INSERT INTO riverlife.river_site(river_site_id, "name", latitude, longitude, river_id, description, picture, river_mile) VALUES 
+(149, 'East 62nd, Manhattan ', 40.760503, -73.956649, 2, 'Location: East 62nd on John Finley Walk, Manhattan NY. Area: East River on FDR N around 62nd street near Andrew Haswell Park. Surrounding Land Use: 80% Commercial, 20% Urban/Residentail with trees and plants. Sampling Site: Rocky ground along with pier, grassy forested, parking lot.', null, 6);

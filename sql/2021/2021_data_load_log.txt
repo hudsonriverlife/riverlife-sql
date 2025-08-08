@@ -1,0 +1,30 @@
+Adjustments made:
+1. Two river site 148, 149 are new.
+2. 4 new fish (100,101,102,103)
+3. 4 new macros (77,78,79,80)
+
+Sequences to run the SQL (some may not be relevant depending on the year)
+1. river.sql
+2. newfish.sql
+3. river_site.sql
+4. site_sampling.sql
+5. newmacros.sql
+6. macros.sql
+6. studentsalinity.sql
+7. standardizeSalinity.sql
+8. turbidity.sql
+9. fish_count.sql
+10. chemistry.sql
+11. physical.sql
+12. other data updates
+
+Program updates:
+Added years 2021 and 2022 to charts
+
+Standard salinity needs 24hr times and multiple times need to be handled.
+Physical needs wind beaufort data to be in integers
+
+Web application was connected to hudson-test (we believe since 2020). 
+It has been switched back to hudson and data from 2020 has been re-added.
+
+The use of hudson-test database dates back to 2018 and it is unclear what the status of is it.
