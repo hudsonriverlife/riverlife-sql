@@ -108,7 +108,7 @@ public class ChemistrySqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021Chemistry.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2024/2024Chemistry.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -124,7 +124,7 @@ public class ChemistrySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="csv/2021_chemistry.csv";
+		String inputFile="csv/2024_Chemistry.csv";
 		ChemistrySqlGenerator work=new ChemistrySqlGenerator();
 		work.processFile(inputFile);
 	

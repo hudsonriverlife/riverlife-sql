@@ -70,7 +70,7 @@ public class StudentSalinitySqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021StudentSalinity.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2024/2024StudentSalinity.sql"));
 			
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
@@ -87,7 +87,7 @@ public class StudentSalinitySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="csv/2021_studentsalinity_updated.csv";
+		String inputFile="csv/2024_Student_Salinity.csv";
 		StudentSalinitySqlGenerator work=new StudentSalinitySqlGenerator();
 		work.processFile(inputFile);
 	

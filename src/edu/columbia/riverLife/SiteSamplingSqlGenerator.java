@@ -57,7 +57,7 @@ public class SiteSamplingSqlGenerator {
 			StringBuffer stringBuffer = new StringBuffer();
 			String line;
 			int i=0;
-		    BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021Site_Sampling.sql"));
+		    BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2024/2024Site_Sampling.sql"));
 		    while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -75,7 +75,7 @@ public class SiteSamplingSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="csv/2021_site_sampling_id_updated.csv";
+		String inputFile="csv/2024_site_sampling_id.csv";
 		SiteSamplingSqlGenerator work=new SiteSamplingSqlGenerator();
 		work.processFile(inputFile);
 	

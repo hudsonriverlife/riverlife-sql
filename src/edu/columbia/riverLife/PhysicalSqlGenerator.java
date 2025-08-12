@@ -75,7 +75,7 @@ public class PhysicalSqlGenerator {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021Physical.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2024/2024Physical.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -90,7 +90,7 @@ public class PhysicalSqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="csv/2021_Physical_updated.csv";
+		String inputFile="csv/2024_Physical.csv";
 		
 		PhysicalSqlGenerator work=new PhysicalSqlGenerator();
 		work.processFile(inputFile);

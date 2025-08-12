@@ -1,0 +1,2 @@
+insert into riverlife.macroinvertebrate (macroinvertebrate_id, name, active) values (84,'Whirligig Beetle', null);
+insert into riverlife.macroinvertebrate (macroinvertebrate_id, name, active) values (85,'Diving Beetle', null);

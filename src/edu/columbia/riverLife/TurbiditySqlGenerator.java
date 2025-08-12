@@ -61,7 +61,7 @@ public class TurbiditySqlGenerator {
 			StringBuffer stringBuffer = new StringBuffer();
 			String line;
 			int i=0;
-			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2021/2021Turbidity.sql"));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("../../../../sql/2024/2024Turbidity.sql"));
 			while ((line = bufferedReader.readLine()) != null) {
 				i++;
 				if ( i == 1)
@@ -78,7 +78,7 @@ public class TurbiditySqlGenerator {
 		
 	}
 	public static void main(String args[]) {
-		String inputFile="csv/2021_turbidity_updated.csv";
+		String inputFile="csv/2024_Turbidity.csv";
 		TurbiditySqlGenerator work=new TurbiditySqlGenerator();
 		work.processFile(inputFile);
 	
