@@ -23,13 +23,8 @@ insert into riverlife.physical_measurement (measure_time, air_temperature, weath
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('11:00','20','Start and stop rain','Sunny','4','7.2',null,'1',null,'20',1232);
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('13:04','18.33','No rain','Chilly and rainy','4','2',null,'5',null,null,1233);
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('10:55','20','Drizzle','Sunny fall weather ','4','9','5',null,null,'18',1234);
-
-
--- wind_beaufort_id 9 is invalid, ignore site
+-- wind_beaufort_id 9 is invalid, ignore row
 -- insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('10:25','20','Drizzle','Sunny fall weather ','4','48','9',null,null,'17',1235);
-
-
-
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('10:30','17.8','Start and stop rain','"warm, cloudy and windy"','4','5',null,null,null,null,1236);
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('11:30','20','Start and stop rain','Clear and warm seasonal weather','4','20','5','2',null,'18',1237);
 insert into riverlife.physical_measurement (measure_time, air_temperature, weather_today, weather_last_3_days, cloud_coverage_id, wind_speed, wind_beaufort_id, wind_direction_id, water_condition, water_temperature, site_sampling_id) values ('10:43','22','No rain','"No rain, warm, and sunny"','4','18','4','6',null,'18',1238);

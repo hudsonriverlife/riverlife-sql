@@ -22,7 +22,7 @@ insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm,
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values (null,52,null,1231,2);
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values (null,96,null,1232,2);
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values ('13:00',562,null,1233,2);
--- insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values ('11:45',1666,null,1234,1);
+insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values ('11:45',1666,null,1234,1);
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values (null,null,null,1235,null);
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values ('10:24',1807,null,1236,1);
 insert into riverlife.standardized_salinity ( salinity_time, total_salinity_ppm, notes, site_sampling_id, salinity_method_id) values ('14:23',1807,null,1237,1);
